@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+
+	<h:head>
+      <title>Employee Management System</title>
+   </h:head>
+	
+
+<body>
+
+	<h3>Select Admin Operation</h3>
+	<h:form prependId="false">
+		<table cellpadding="2" cellspacing="2">
+		
+			<tr>
+				<td>Add Employee</td>
+				<td>&nbsp;</td>
+				<td>
+					<h:commandButton value="Add" action="#{employeeManagedBean.callAdd()}"></h:commandButton>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Remove an Employee</td>
+				<td>&nbsp;</td>
+				<td>
+					<h:commandButton value="Remove" action="#{employeeManagedBean.callRemove()}"></h:commandButton>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>View Employees</td>
+				<td>&nbsp;</td>
+				<td>
+					<h:commandButton value="View" action="#{employeeManagedBean.callView()}"></h:commandButton>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Add a Project</td>
+				<td>&nbsp;</td>
+				<td>
+					<h:commandButton value="Add Project" action="#{employeeManagedBean.callAddProject()}"></h:commandButton>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Allocate Project to an Employee</td>
+				<td>&nbsp;</td>
+				<td>
+					<h:commandButton value="Allocate Project" action="#{employeeManagedBean.callAllocateProject()}"></h:commandButton>
+				</td>
+			</tr>
+		</table>
+	</h:form>
+
+</body>
+</html>

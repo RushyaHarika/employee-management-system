@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+
+	<h:head>
+      <title>Employee Management System</title>
+   </h:head>
+	
+
+<body>
+
+	<h3>Viewing employee details</h3>
+	<h:form prependId="false">
+		<table cellpadding="2" cellspacing="1">
+		
+			<tr>
+				<td>
+				ID    &nbsp;&nbsp;  Name     &nbsp;&nbsp;      Role &nbsp;&nbsp;PID &nbsp;&nbsp; Salary
+				</td>				
+			</tr>
+			<tr>
+				<td>
+				
+					#{employeeManagedBean.view()}
+					<ui:repeat value="#{employeeManagedBean.users}" var="user">
+           				 <h:commandButton value="#{user.eid} &nbsp;&nbsp; #{user.ename} &nbsp;&nbsp; #{user.erole} &nbsp;&nbsp; #{user.eproject} &nbsp;&nbsp;&nbsp; #{user.salary}" />
+           				 <br/>
+       				 </ui:repeat>  
+       				 </td>
+			
+				<td>&nbsp;</td>
+				
+			</tr>
+		</table>
+	</h:form>
+
+</body>
+</html>
